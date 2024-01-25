@@ -28,7 +28,7 @@ class book(models.Model):
     def button_check_isbn(self):
         for book in self:
             if not book.isbn:
-                raise ValidationError("Please provide an ISBN for %s" % book.name)
+                raise ValidationError("Por favor introduce un ISBN para %s" % book.name)
             if book.isbn and not book._check_isbn():
-                raise ValidationError("%s ISBN is invalid" % book.isbn)
+                raise ValidationError("%s ISBN es invalido" % book.isbn)
         return True
