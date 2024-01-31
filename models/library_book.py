@@ -1,6 +1,5 @@
 from odoo import fields, models
 from odoo.exceptions import ValidationError
-from odoo.exceptions import UserError
 
 
 class book(models.Model):
