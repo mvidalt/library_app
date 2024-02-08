@@ -9,6 +9,7 @@
                         <th>Authors</th>
                         <th>Publisher</th>
                         <th>Date Published</th>
+                        <th>Bookable</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,6 +24,14 @@
                             </td>
                             <td><span t-field="book.publisher_id.name"/></td>
                             <td><span t-field="book.date_published"/></td>
+                            <td>
+                                <t t-if="book.bookable">
+                                    Yes
+                                </t>
+                                <t t-else="">
+                                    No
+                                </t>
+                            </td>
                         </tr>
                     </t>
                 </tbody>
@@ -30,3 +39,4 @@
         </div>
     </template>
 </odoo>
+

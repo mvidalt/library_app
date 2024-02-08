@@ -13,6 +13,7 @@ class book(models.Model):
     image = fields.Binary("Portada")
     publisher_id = fields.Many2one("res.partner", string="Editorial")
     author_ids = fields.Many2many("res.partner", string="Autor")
+    bookable = fields.Boolean("Prestable", default=True)
     
     def _check_isbn(self):
         self.ensure_one()
